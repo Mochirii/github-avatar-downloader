@@ -4,15 +4,16 @@ const repoOwner = process.argv[2];
 const repoName = process.argv[3];
 
 
+
+
+console.log('Welcome to the GitHub Avatar Downloader!');
+// console.log('Make sure you type in the name of the Contributor and then the Repo name.')
 var requestURL = {
   url: "https://api.github.com/repos/" + repoOwner + "/" + repoName + "/contributors",
   headers: {
     'User-Agent': 'request',
-  }
+  } 
 };
-
-console.log('Welcome to the GitHub Avatar Downloader!');
-// console.log('Make sure you type in the name of the Contributor and then the Repo name.')
 
 function getRepoContributors(requestURL, cb) {
   var url = {}
